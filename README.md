@@ -5,8 +5,8 @@ Transport for London, the body responsible for delivery of a new bike system, co
 
 Foucs And Goals for Challenge
 ```
-To be able to TDD anything
-To be able to debug anything
-To be able to write solid and clean code
+To be able to TDD anything.
+To be able to debug anything.
+To be able to write solid and clean code.
  ```
  
