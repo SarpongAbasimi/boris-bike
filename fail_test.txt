@@ -1,5 +1,6 @@
 example_id                            | status | run_time        |
 ------------------------------------- | ------ | --------------- |
-./spec/bike_spec.rb[1:1:1]            | passed | 0.00179 seconds |
-./spec/bike_spec.rb[1:1:2]            | failed | 0.03637 seconds |
-./spec/docking_station_spec.rb[1:1:1] | passed | 0.00017 seconds |
+./spec/bike_spec.rb[1:1:1]            | passed | 0.00159 seconds |
+./spec/bike_spec.rb[1:1:2]            | passed | 0.00252 seconds |
+./spec/docking_station_spec.rb[1:1:1] | passed | 0.00023 seconds |
+./spec/docking_station_spec.rb[1:1:2] | passed | 0.00022 seconds |
