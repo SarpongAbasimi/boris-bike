@@ -1,12 +1,15 @@
 require 'docking_station'
-require 'bike'
+#require 'bike'
 
 RSpec.describe DockingStation do
   describe '#release_bike' do
     it {is_expected.to respond_to(:release_bike)}
     it ' gets a bike' do
-      bike = subject.release_bike
+      bike = Bike.new
       expect(bike).to be_working
+    end
+    it 'raises error if no bikes are available' do
+      expect {subject.release_bike}.to raise_error 'No Bikes Available'
     end
   end
 
