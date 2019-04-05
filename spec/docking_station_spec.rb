@@ -1,5 +1,4 @@
 require 'docking_station'
-#require 'bike'
 
 RSpec.describe DockingStation do
   describe '#release_bike' do
@@ -18,8 +17,8 @@ RSpec.describe DockingStation do
     it {is_expected.to respond_to(:dock_bike).with(1).arguments}
     it 'must dock bike' do
       bike = Bike.new
-      expect(subject.dock_bike(bike)).to eq(bike)
-      expect(subject.bike).to eq(bike)
+      expect(subject.dock_bike(bike)).to eq([bike])
+      expect(subject.bikes_available).to eq([bike])
     end
   end
 end
