@@ -17,9 +17,14 @@ RSpec.describe DockingStation do
     it {is_expected.to respond_to(:dock_bike).with(1).arguments}
     it 'must dock bike' do
       bike = Bike.new
-      DOCK_STATION_MAX_CAPACITY = 20
       expect(subject.dock_bike(bike)).to eq([bike])
-     expect(subject.bikes_available.size).to be <= DOCK_STATION_MAX _CAPACITY
+      expect(subject.bikes_available.size).to be <= DockingStation::BIKE_MAX_CAPACITY
     end
+    
+    it 'raises an error if bike capacity if full' do
+      20.times{subject.dock_bike(Bike.new)}
+      expect {subject.dock_bike(Bike.new)}.to raise_error 'Docking station is full'
+    end
+
   end
 end
