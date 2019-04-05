@@ -14,10 +14,7 @@ class DockingStation
     end
     
     def dock_bike(bike)
-        if @bikes_available.size >= BIKE_MAX_CAPACITY
-          raise 'Docking station is full'
-        else  
-          @bikes_available << bike
-        end
+      raise 'Docking station is full' if @bikes_available.size >= BIKE_MAX_CAPACITY
+      @bikes_available << bike
     end
 end
